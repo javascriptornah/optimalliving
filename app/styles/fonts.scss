@@ -13,6 +13,9 @@ p {
 // Desktop view, base px 18, multiplier of 1.333
 
 @media only screen and (min-width: 1201px) {
+  .large{
+    font-size: 23.99px;
+  }
   html {
     font-size: 18px;
   }
@@ -42,6 +45,9 @@ p {
 // Mobile view, base px 16, multiplier of 1.25
 
 @media only screen and (max-width: 1201px) {
+  .large{
+    font-size: 20px;
+  }
   html {
     font-size: 16px;
   }
