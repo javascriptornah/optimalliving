@@ -3,6 +3,7 @@ import "./styles/global.scss";
 import StyledComponentsRegistry from "@/lib/registry";
 import NextTopLoader from "nextjs-toploader";
 import Navbar from "@/components/Navbar";
+import Footer from "./Footer";
 
 export default function RootLayout({ children }) {
   return (
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
         <StyledComponentsRegistry>
           <Navbar />
           {children}
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>

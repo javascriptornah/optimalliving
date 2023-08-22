@@ -48,3 +48,21 @@ $dark-green: #0E2D21;
     }
   }
 }
+.green-btn{
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: $green;
+  cursor:pointer;
+  transition: color .25s ease, background-color .25s ease;
+  border: 2px solid transparent;
+  &:hover{
+    border: 2px solid $green;
+    background-color: #fff;
+    h3,h4,h5{
+      color: $green;
+    }
+  }
+  h3,h4,h5{
+    color: #fff;
+  }
+}

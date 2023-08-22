@@ -18,6 +18,10 @@ $lightish-grey: #D9D9D9;
 
 }
 
+.footer-link{
+  background-color: $grey;
+}
+
 // inputs
 input {
   background-color: $light-grey;
@@ -60,6 +64,12 @@ textarea{
 // misc 
 .cursor {
   cursor: pointer;
+}
+
+.underline-hover{
+  &:hover{
+    text-decoration: underline;
+  }
 }
 //
 
@@ -230,7 +240,12 @@ a {
   padding: 32px;
 }
 .px-16{
-  padding: 0 16px;
+  padding-right: 16px;
+  padding-left:16px;
+}
+.py-8{
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 .padding-8{
   padding: 8px;
@@ -260,6 +275,9 @@ a {
 }
 .mar-bottom-16 {
   margin-bottom: 16px;
+}
+.mar-bottom-24 {
+  margin-bottom: 24px;
 }
 .mar-bottom-32 {
   margin-bottom: 32px;
@@ -344,5 +362,9 @@ a {
 
 .align-start{
   align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
 }
 // end of flex box
