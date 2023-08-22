@@ -41,7 +41,7 @@ p {
 
 // Mobile view, base px 16, multiplier of 1.25
 
-@media only screen and (min-width: 601px) and (max-width: 1201px) {
+@media only screen and (max-width: 1201px) {
   html {
     font-size: 16px;
   }

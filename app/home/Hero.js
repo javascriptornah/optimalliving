@@ -13,7 +13,13 @@ const Cont = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 5%;
+    padding: 2.5%;
+    @media only screen and (max-width: 1201px) {
+      padding: 5%;
+    }
+    @media only screen and (max-width: 600px) {
+      height: 600px;
+    }
   }
   .white-bg-30 {
     background-color: #fff;
@@ -44,7 +50,7 @@ const Hero = () => {
     <Cont colors={COLORS}>
       <div className="image-holder">
         <div className="banner">
-          <h1>Improve your health and find your community</h1>
+          <h2>Improve your health and find your community</h2>
           <div className="buttons flex flex-column flex-one justify-center">
             <div className="black-btn mar-bottom-32">
               <h4>Book a consultation</h4>
