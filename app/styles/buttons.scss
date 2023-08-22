@@ -12,10 +12,12 @@ $dark-green: #0E2D21;
   white-space: nowrap;
   transition: background-color .25s ease;
   text-align: center;
+  border: 2px solid transparent;
   h3,h4,h5{
     color: #fff;
   }
   &:hover{
+    border: 2px solid $black;
     background-color: #fff;
     h3,h4,h5{
       color: $black;
