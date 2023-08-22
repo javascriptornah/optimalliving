@@ -8,6 +8,7 @@ $green: #38876F;
 $dark-green: #0E2D21;
 $dark-grey: #606060;
 $light-grey: #F4F4F4;
+$lightish-grey: #D9D9D9;
 
 
 * {
@@ -16,6 +17,103 @@ $light-grey: #F4F4F4;
   box-sizing: border-box;
 
 }
+
+// misc 
+.cursor {
+  cursor: pointer;
+}
+//
+
+// colors
+.black {
+  color: $black;
+}
+
+.grey{ 
+  color: $grey;
+}
+.tan {
+  color: $tan;
+}
+
+.green {
+  color: $green;
+}
+
+
+.dark-green {
+  color: $dark-green;
+}
+
+.dark-grey {
+  color: $dark-grey;
+}
+
+.light-grey { 
+  color: $light-grey;
+}
+
+.hover-green {
+  transition: color .25s ease;
+  &:hover{
+    color: $green;
+  }
+}
+
+// end of colors
+
+
+// icons
+.icon-ssm {
+  font-size: 20px;
+}
+.icon-sm {
+  font-size: 24px;
+}
+.icon-med {
+  font-size: 30px;
+}
+
+.icon-lg {
+  font-size: 40px;
+}
+.icon-xl {
+  font-size: 56px;
+}
+
+// end of icons
+
+// mobile and desktop changes
+
+.hide-mobile {
+  
+  @media only screen and (max-width:600px) {
+    display:none !important;
+  }
+}
+
+.show-mobile {
+  display: none !important;
+  @media only screen and (max-width:600px) {
+    display: block !important;
+  }
+}
+// end of mobile and desktop changes
+
+// lines
+
+.black-line{
+  width: 100%;
+  height: 1px;
+  background-color: $black;
+}
+
+.black-line-2{
+  width: 100%;
+  height: 2px;
+  background-color: $black;
+}
+// end of lines
 
 
 // links
@@ -151,6 +249,8 @@ a {
 .flex-row {
   flex-direction: row !important;
 }
+
+.flex-column {flex-direction: column;}
 .space-between {
   justify-content: space-between;
 }
@@ -188,5 +288,9 @@ a {
 }
 .align-center {
   align-items: center;
+}
+
+.align-start{
+  align-items: flex-start;
 }
 // end of flex box
