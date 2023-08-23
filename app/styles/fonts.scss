@@ -10,7 +10,7 @@ p {
   font-family: 'Lato';
 }
 
-// Desktop view, base px 18, multiplier of 1.333
+// Desktop view, base px 18, multiplier of 1.2
 
 @media only screen and (min-width: 1201px) {
   .large{
@@ -20,19 +20,19 @@ p {
     font-size: 18px;
   }
   h1 {
-    font-size: 75.76px;
+    font-size: 44.79px;
   }
   h2 {
-    font-size: 56.83px;
+    font-size: 37.32px;
   }
   h3 {
-    font-size: 42.63px;
+    font-size: 31.1px;
   }
   h4 {
-    font-size: 31.98px;
+    font-size: 25.92px;
   }
   h5 {
-    font-size: 23.99px;
+    font-size: 21.6px;
   }
   h6 {
     font-size: 1rem;
@@ -42,7 +42,7 @@ p {
   }
 }
 
-// Mobile view, base px 16, multiplier of 1.25
+// Mobile view, base px 16, multiplier of 1.125
 
 @media only screen and (max-width: 1201px) {
   .large{
@@ -52,19 +52,19 @@ p {
     font-size: 16px;
   }
   h1 {
-    font-size: 48.83px;
+    font-size: 28.83px;
   }
   h2 {
-    font-size: 39.06px;
+    font-size: 25.63px;
   }
   h3 {
-    font-size: 31.25px;
+    font-size: 22.78px;
   }
   h4 {
-    font-size: 25px;
+    font-size: 20.25px;
   }
   h5 {
-    font-size: 20px;
+    font-size: 18px;
   }
   h6 {
     font-size: 1rem;

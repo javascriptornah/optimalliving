@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Cont = styled.div`
+  position: relative;
   .top-bar {
     padding: 16px 32px;
     position: relative;
@@ -18,13 +19,20 @@ const Cont = styled.div`
   }
 
   .nav-dropdown {
-    background-color: ${(props) => props.colors.lightishGrey};
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      -90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(217, 217, 217, 1) 100%
+    );
     padding: 16px;
     position: absolute;
     width: 100%;
     top: 100%;
     left: 0px;
-    z-index: -1;
+    z-index: 3;
+    transform: translate(-100%, 0%);
+
     transition: transform 0.5s ease;
   }
 `;
@@ -90,44 +98,46 @@ const Navbar = () => {
             />
           </div>
         </div>
-
-        {/** Navbar dropdown */}
-        <div
-          className="nav-dropdown show-mobile"
-          style={{
-            transform: showDropdown ? "translateY(0)" : "translateY(-100%)",
-          }}
-        >
-          <div className="flex flex-end flex-wrap align-start flex-one flex-column">
-            <Link href="/" className=" base-link mar-bottom-16">
-              <h5 className={pathname == "/" ? "link-underline" : ""}>Home</h5>
-            </Link>
-            <Link href="/directory" className=" base-link mar-bottom-16">
-              <h5 className={pathname == "/directory" ? "link-underline" : ""}>
-                Directory
-              </h5>
-            </Link>
-            <Link href="/consultations" className=" base-link mar-bottom-16">
-              <h5
-                className={pathname == "/consultations" ? "link-underline" : ""}
-              >
-                Consultations
-              </h5>
-            </Link>
-            <Link href="/contact" className=" base-link mar-bottom-16">
-              <h5 className={pathname == "/contact" ? "link-underline" : ""}>
-                Contact
-              </h5>
-            </Link>
-            <Link href="/signup" className="mar-bottom-16">
-              <div className="black-btn">
-                <h5>Sign up</h5>
-              </div>
-            </Link>
-          </div>
-        </div>
-        {/** End of navbar dropdown */}
       </div>
+      {/** Navbar dropdown */}
+      <div
+        className="nav-dropdown show-mobile box-shadow-one"
+        style={{
+          transform: showDropdown
+            ? "translate(-100%, 0%)"
+            : "translate(0%, 0%)",
+        }}
+      >
+        <div className="flex flex-end flex-wrap align-end flex-one flex-column">
+          <Link href="/" className=" base-link mar-bottom-16">
+            <h5 className={pathname == "/" ? "link-underline" : ""}>Home</h5>
+          </Link>
+          <Link href="/directory" className=" base-link mar-bottom-16">
+            <h5 className={pathname == "/directory" ? "link-underline" : ""}>
+              Directory
+            </h5>
+          </Link>
+          <Link href="/consultations" className=" base-link mar-bottom-16">
+            <h5
+              className={pathname == "/consultations" ? "link-underline" : ""}
+            >
+              Consultations
+            </h5>
+          </Link>
+          <Link href="/contact" className=" base-link mar-bottom-16">
+            <h5 className={pathname == "/contact" ? "link-underline" : ""}>
+              Contact
+            </h5>
+          </Link>
+          <Link href="/signup" className="mar-bottom-16">
+            <div className="black-btn">
+              <h5>Sign up</h5>
+            </div>
+          </Link>
+        </div>
+      </div>
+      {/** End of navbar dropdown */}
+
       <div className="black-line-2"></div>
     </Cont>
   );

@@ -1,5 +1,6 @@
 @import "fonts.scss";
 @import "buttons.scss";
+@import "dropdown.scss";
 
 $black: #1C1F20;
 $grey: #646E74;
@@ -18,10 +19,21 @@ $lightish-grey: #D9D9D9;
 
 }
 
+.base-page {
+  min-height: 100vh;
+}
 .footer-link{
   background-color: $grey;
 }
 
+.border-32{
+  border-radius: 32px;
+}
+// box shadows
+    .box-shadow-one {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+// end of box shadows
 // inputs
 input {
   background-color: $light-grey;
@@ -69,13 +81,21 @@ textarea{
 .underline-hover{
   &:hover{
     text-decoration: underline;
+    * {
+      text-decoration: underline;
+    }
   }
+  
 }
 //
 
 // colors
 .white {
   color: #fff;
+}
+
+.tan {
+  color: $tan;
 }
 .black {
   color: $black;
@@ -107,8 +127,27 @@ textarea{
 
 .hover-green {
   transition: color .25s ease;
+  h2,h3,h4,h5,p {
+    transition: color .25s ease;
+  }
   &:hover{
     color: $green;
+    p {
+      color: $green;
+    }
+  }
+}
+
+.hover-tan {
+  transition: color .25s ease;
+  h2,h3,h4,h5,p {
+    transition: color .25s ease;
+  }
+  &:hover{
+    color: $tan;
+    p {
+      color: $tan;
+    }
   }
 }
 

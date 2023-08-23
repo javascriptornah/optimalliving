@@ -9,8 +9,8 @@ export default function Home() {
     <main>
       <Hero />
       <div className="ssm-spacer-bot-res"></div>
-      <Testimonials />
-      <div className="ssm-spacer-bot-res"></div>
+      {/*  <Testimonials />
+      <div className="ssm-spacer-bot-res"></div> */}
       <HereToHelp />
       <div className="ssm-spacer-bot-res"></div>
 

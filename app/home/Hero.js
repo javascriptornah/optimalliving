@@ -20,6 +20,9 @@ const Cont = styled.div`
     @media only screen and (max-width: 600px) {
       height: 600px;
     }
+    @media only screen and (max-width: 300px) {
+      padding: 0%;
+    }
   }
   .white-bg-30 {
     background-color: #fff;
@@ -42,6 +45,10 @@ const Cont = styled.div`
     flex-direction: column;
     justify-content: space-between;
     z-index: 2;
+    @media only screen and (max-width: 300px) {
+      padding: 8px 16px;
+      border-radius: 0;
+    }
   }
 `;
 
@@ -56,7 +63,7 @@ const Hero = () => {
               <h4>Book a consultation</h4>
             </div>
             <div className="white-btn">
-              <h4>Community Finder</h4>
+              <h4>Directory</h4>
             </div>
           </div>
         </div>

@@ -13,6 +13,7 @@ import {
 const Cont = styled.div`
   max-width: 1000px;
   margin: 0 auto;
+  padding: 16px;
 `;
 
 const HereToHelp = () => {
