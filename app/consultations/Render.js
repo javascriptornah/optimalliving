@@ -68,7 +68,7 @@ const Render = () => {
           <Calendar onChange={setDay} value={day} minDate={new Date()} />
           <div className="mar-bottom-32"></div>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <TimePicker label="Select date" />
+            <TimePicker label="Select time" />
           </LocalizationProvider>
         </div>
         <div>
@@ -98,10 +98,10 @@ const Render = () => {
             </label>
             <div className="mar-bottom-32"></div>
             <label htmlFor="">
-              <h5 className="mar-bottom-8">Name</h5>
+              <h5 className="mar-bottom-8">Instagram</h5>
               <input
                 type="text"
-                {...register("name", {
+                {...register("instagram", {
                   required: true,
                 })}
               />
@@ -157,6 +157,9 @@ const Render = () => {
               ></textarea>
             </label>
             <div className="mar-bottom-32"></div>
+            <button className="black-btn">
+              <h4>Book</h4>
+            </button>
           </form>
         </div>
       </div>
