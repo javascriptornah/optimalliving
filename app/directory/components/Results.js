@@ -51,9 +51,10 @@ const Results = () => {
     },
   ]);
 
-  const lines = people.map((person) => {
+  const lines = people.map((person, index) => {
     return (
       <Line
+        key={index}
         social="instagram"
         name={person.name}
         link={person.social}
