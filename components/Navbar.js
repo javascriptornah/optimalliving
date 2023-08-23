@@ -104,8 +104,8 @@ const Navbar = () => {
         className="nav-dropdown show-mobile box-shadow-one"
         style={{
           transform: showDropdown
-            ? "translate(-100%, 0%)"
-            : "translate(0%, 0%)",
+            ? "translate(0%, 0%)"
+            : "translate(-100%, 0%)",
         }}
       >
         <div className="flex flex-end flex-wrap align-end flex-one flex-column">
