@@ -109,22 +109,38 @@ const Navbar = () => {
         }}
       >
         <div className="flex flex-end flex-wrap align-end flex-one flex-column">
-          <Link href="/" className=" base-link mar-bottom-16">
+          <Link
+            href="/"
+            className=" base-link mar-bottom-16"
+            onClick={toggleDropdown}
+          >
             <h5 className={pathname == "/" ? "link-underline" : ""}>Home</h5>
           </Link>
-          <Link href="/directory" className=" base-link mar-bottom-16">
+          <Link
+            href="/directory"
+            className=" base-link mar-bottom-16"
+            onClick={toggleDropdown}
+          >
             <h5 className={pathname == "/directory" ? "link-underline" : ""}>
               Directory
             </h5>
           </Link>
-          <Link href="/consultations" className=" base-link mar-bottom-16">
+          <Link
+            href="/consultations"
+            className=" base-link mar-bottom-16"
+            onClick={toggleDropdown}
+          >
             <h5
               className={pathname == "/consultations" ? "link-underline" : ""}
             >
               Consultations
             </h5>
           </Link>
-          <Link href="/contact" className=" base-link mar-bottom-16">
+          <Link
+            href="/contact"
+            className=" base-link mar-bottom-16"
+            onClick={toggleDropdown}
+          >
             <h5 className={pathname == "/contact" ? "link-underline" : ""}>
               Contact
             </h5>

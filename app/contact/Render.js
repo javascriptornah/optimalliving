@@ -33,6 +33,8 @@ const Cont = styled.div`
   }
   .icon {
     border: 2px solid transparent;
+    padding: 4px;
+    flex-shrink: 0;
     &:hover {
       border: 2px solid #fff;
     }

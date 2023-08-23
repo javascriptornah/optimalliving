@@ -48,6 +48,9 @@ input {
   &:focus{
     border: 2px solid $black;
   }
+  &:not(:placeholder-shown) {
+    border: 1px solid $green;
+  }
   min-width: 0px;
 
 }
@@ -62,8 +65,12 @@ textarea{
   outline: none;
   border: none;
   border: 2px solid transparent;
+  border-radius: 8px;
   &:focus{
     border: 2px solid $black;
+  }
+  &:not(:placeholder-shown) {
+    border: 1px solid $green;
   }
 }
 

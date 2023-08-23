@@ -20,15 +20,15 @@ const Cont = styled.div`
   grid-template-areas: "a b c";
   justify-content: space-between;
   align-items: flex-start;
+  .grid-2 {
+    justify-content: center;
+  }
   @media only screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "b b"
       "a c";
-    .grid-2 {
-      justify-content: center;
-    }
   }
 
   @media only screen and (max-width: 550px) {
@@ -75,6 +75,7 @@ const Footer = () => {
 
   return (
     <Cont colors={COLORS}>
+      {/** Grid 1 */}
       <div className="grid-1">
         <h4 className="white mar-bottom-8">Email</h4>
         <a href="mailto:">
@@ -82,19 +83,31 @@ const Footer = () => {
         </a>
         <div className="mar-bottom-24"></div>
         <div className="flex">
-          <a href="" className="mar-right-32">
+          <a
+            href="https://www.instagram.com/scottprimal/"
+            className="mar-right-32"
+            target="_blank"
+          >
             <FontAwesomeIcon
               icon={faInstagram}
               className="icon-med white hover-green"
             />
           </a>
-          <a href="" className="mar-right-32">
+          <a
+            href="https://twitter.com/scottprimal"
+            className="mar-right-32"
+            target="_blank"
+          >
             <FontAwesomeIcon
               icon={faTwitter}
               className="icon-med white hover-green"
             />
           </a>
-          <a href="" className="mar-right-32">
+          <a
+            href="https://www.youtube.com/@scottprimal8970"
+            className="mar-right-32"
+            target="_blank"
+          >
             <FontAwesomeIcon
               icon={faYoutube}
               className="icon-med white hover-green"
@@ -102,7 +115,9 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      {/** End of grid 1 */}
 
+      {/** Grid 2 */}
       <div className="flex grid-2">
         <Link
           href="/"
@@ -111,7 +126,7 @@ const Footer = () => {
           <h5 className="white">Home</h5>
         </Link>
         <Link
-          href="/"
+          href="/directory"
           className={
             pathname == "/directory" ? "footer-link px-16 py-8" : "px-16 py-8"
           }
@@ -119,7 +134,7 @@ const Footer = () => {
           <h5 className="white">Directory</h5>
         </Link>
         <Link
-          href="/"
+          href="/consultations"
           className={
             pathname == "/consultations"
               ? "footer-link px-16 py-8"
@@ -129,7 +144,7 @@ const Footer = () => {
           <h5 className="white">Consultations</h5>
         </Link>
         <Link
-          href="/"
+          href="/contact"
           className={
             pathname == "/contact" ? "footer-link px-16 py-8" : "px-16 py-8"
           }
@@ -137,11 +152,14 @@ const Footer = () => {
           <h5 className="white">Contact</h5>
         </Link>
       </div>
+      {/** End of grid 2 */}
 
+      {/** Grid 3 */}
       <div className="flex  align-end flex-column grid-3">
         <h4 className="white ">Mailing List</h4>\
         <MailingList />
       </div>
+      {/** End of grid 3 */}
     </Cont>
   );
 };
