@@ -1,0 +1,29 @@
+
+
+/* @keyframes borderError {
+  0% {
+    border: 1px solid transparent;
+    border-color: inherit;
+  }
+  50% {
+    border: 1px solid red;
+  }
+  100% {
+    border: 1px solid transparent;
+    border-color: inherit;
+  }
+} */
+@keyframes border {
+  from {
+    background-color: red;
+  }
+  to{
+    background-color: white;
+  }
+}
+
+.border-error {
+  
+  animation-name: border;
+  animation-duration: 2s;
+}
