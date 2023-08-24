@@ -2,6 +2,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import StyledComponentsRegistry from "@/lib/registry";
 import COLORS from "@/data/colors";
+import Link from "next/link";
 
 const Cont = styled.div`
   .image-holder {
@@ -59,12 +60,16 @@ const Hero = () => {
         <div className="banner">
           <h2>Improve your health and find your community</h2>
           <div className="buttons flex flex-column flex-one justify-center">
-            <div className="black-btn mar-bottom-32">
-              <h4>Book a consultation</h4>
-            </div>
-            <div className="white-btn">
-              <h4>Directory</h4>
-            </div>
+            <Link href="/consultations">
+              <div className="black-btn mar-bottom-32">
+                <h4>Book a consultation</h4>
+              </div>
+            </Link>
+            <Link href="/directory">
+              <div className="white-btn">
+                <h4>Directory</h4>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="white-bg-30"></div>

@@ -139,7 +139,7 @@ const Render = () => {
               <h5 className="mar-bottom-8">Email</h5>
               <input
                 type="text"
-                placeholder="email"
+                placeholder="johndoe@gmail.com"
                 name="email"
                 className={errors?.email?.type == "required" ? "error" : ""}
                 {...register("email", {
@@ -159,6 +159,7 @@ const Render = () => {
               <h5 className="mar-bottom-8">Instagram</h5>
               <input
                 type="text"
+                placeholder="@james123"
                 className={errors?.instagram?.type == "required" ? "error" : ""}
                 {...register("instagram", {
                   required: false,

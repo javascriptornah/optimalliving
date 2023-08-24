@@ -84,11 +84,11 @@ const Navbar = () => {
                 Contact
               </h5>
             </Link>
-            <Link href="/signup" className="mar-bottom-16">
+            {/*    <Link href="/signup" className="mar-bottom-16">
               <div className="black-btn">
                 <h5>Sign up</h5>
               </div>
-            </Link>
+            </Link> */}
           </div>
 
           <div className="mobile-nav show-mobile" onClick={toggleDropdown}>
@@ -145,11 +145,11 @@ const Navbar = () => {
               Contact
             </h5>
           </Link>
-          <Link href="/signup" className="mar-bottom-16">
+          {/*  <Link href="/signup" className="mar-bottom-16">
             <div className="black-btn">
               <h5>Sign up</h5>
             </div>
-          </Link>
+          </Link> */}
         </div>
       </div>
       {/** End of navbar dropdown */}

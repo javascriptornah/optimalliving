@@ -78,8 +78,8 @@ const Footer = () => {
       {/** Grid 1 */}
       <div className="grid-1">
         <h4 className="white mar-bottom-8">Email</h4>
-        <a href="mailto:">
-          <p className="white underline-hover">example@gmail.com</p>
+        <a href="mailto:Scottahalljr@gmail.com">
+          <p className="white underline-hover">Scottahalljr@gmail.com</p>
         </a>
         <div className="mar-bottom-24"></div>
         <div className="flex">

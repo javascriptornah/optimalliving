@@ -83,14 +83,14 @@ const Render = () => {
           <h3 className="white mar-bottom-32 ">Contact Information</h3>
           <div className="flex-column flex-one flex-wrap flex space-between ">
             <a
-              href="mailto:"
+              href="mailto:Scottahalljr@gmail.com"
               className="flex-inline underline-hover hover-tan email-link"
             >
               <FontAwesomeIcon
                 icon={faEnvelope}
                 className="white icon-med mar-right-16"
               />
-              <p className="large white">scotthall@gmail.com</p>
+              <p className="large white">Scottahalljr@gmail.com</p>
             </a>
             <div className="flex space-around flex-icons">
               <div>
