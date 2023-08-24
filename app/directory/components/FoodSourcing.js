@@ -60,6 +60,7 @@ const FoodSourcing = () => {
   const selectors = countries.map((country, index) => {
     return (
       <div
+        key={index}
         className={country.selected ? "selected selector" : "selector"}
         onClick={() => selectCountry(country.name)}
       >
