@@ -91,9 +91,10 @@ const SourcingResults = ({
   selectState,
   foodSources,
 }) => {
-  const stateElems = states.map((state) => {
+  const stateElems = states.map((state, index) => {
     return (
       <div
+        key={index}
         onClick={() => selectState(state)}
         className={selectedState == state ? "state active-state" : "state"}
       >
@@ -107,9 +108,10 @@ const SourcingResults = ({
       <div className="food-source" key={index}>
         <h3 className="mar-bottom-16">{foodSource.title} </h3>
         <div className="flex justify-center mar-bottom-16">
-          {foodSource.foodTypes.map((foodType) => {
+          {foodSource.foodTypes.map((foodType, index) => {
             return (
               <FontAwesomeIcon
+                key={index}
                 icon={foodSourcesDict[foodType]}
                 className="black icon-med mar-right-8 mar-left-8"
               />
