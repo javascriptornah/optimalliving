@@ -128,7 +128,12 @@ const FoodSourcing = () => {
   return (
     <Cont colors={COLORS}>
       <h2 className="mar-bottom-8">Food Sourcing</h2>
-      <div className="black-line mar-bottom-32"></div>
+      <div className="black-line mar-bottom-16"></div>
+      <p>
+        Search for farms across the US and Canada for high quality eggs, meat
+        and raw milk.
+      </p>
+      <div className="mar-bottom-32"></div>
       <div className="selector-holder mar-bottom-32">{selectors}</div>
 
       <SourcingResults

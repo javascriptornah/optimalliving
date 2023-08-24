@@ -9,10 +9,11 @@ import { TimePicker } from "@mui/x-date-pickers";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { useForm } from "react-hook-form";
-import { FormControl } from "@mui/material";
+import { FormControl, alertClasses } from "@mui/material";
 import { InputLabel, Select, MenuItem } from "@mui/material";
 import { Toaster } from "react-hot-toast";
 import toast from "react-hot-toast";
+import emailjs, { init } from "@emailjs/browser";
 
 const Cont = styled.div`
   max-width: 1200px;
@@ -64,12 +65,6 @@ const Render = () => {
     formState: { errors, isValid },
   } = useForm();
 
-  console.log("time");
-  console.log(time);
-
-  console.log("age");
-  console.log(age);
-
   const checkErrors = () => {
     let errorState = false;
     if (time == "") {
@@ -88,7 +83,10 @@ const Render = () => {
 
   const submitForm = handleSubmit(async (formData) => {
     // return if time wasn't selected, else process form
-    if (!checkErrors) return;
+    if (checkErrors()) return;
+    formData.day = day;
+    formData.age = age;
+    formData.time = time;
   });
   return (
     <Cont colors={COLORS}>
