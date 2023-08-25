@@ -11,9 +11,10 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { useForm } from "react-hook-form";
 import { FormControl, alertClasses } from "@mui/material";
 import { InputLabel, Select, MenuItem } from "@mui/material";
-import { Toaster } from "react-hot-toast";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import emailjs, { init } from "@emailjs/browser";
+import { formatTime } from "@/lib/Functions";
+import { sendConsultationForm } from "@/lib/SupabaseFunctions";
 
 const Cont = styled.div`
   max-width: 1200px;
@@ -81,13 +82,47 @@ const Render = () => {
     return errorState;
   };
 
+  // function used to submit form and send email and post to database
   const submitForm = handleSubmit(async (formData) => {
     // return if time wasn't selected, else process form
     if (checkErrors()) return;
-    formData.day = day;
+    formData.date = day.toString();
     formData.age = age;
-    formData.time = time;
+
+    let hours = time.$H;
+    let mins = time.$m;
+    let timeFormat = formatTime(hours, mins);
+    formData.time = timeFormat;
+
+    // sends to database (supabase)
+    sendConsultationForm(
+      formData.name,
+      formData.email,
+      formData.instagram,
+      formData.money,
+      formData.goals,
+      formData.healthIssues,
+      formData.age,
+      day.toISOString(),
+      timeFormat
+    );
+
+    formData.dateSent = new Date().toString();
+    // sends email through emailjs
+    const myPromise = emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_CONSULT_TEMPLATE_ID,
+      formData,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    );
+
+    toast.promise(myPromise, {
+      loading: "Sending...",
+      success: "Consult sent!",
+      error: "Error sending...",
+    });
   });
+
   return (
     <Cont colors={COLORS}>
       <Toaster />

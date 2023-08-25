@@ -6,6 +6,7 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import emailjs, { init } from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import { useForm } from "react-hook-form";
+import { sendContactForm } from "@/lib/SupabaseFunctions";
 
 const Cont = styled.form`
   max-width: 800px;
@@ -43,8 +44,9 @@ const Contact = () => {
   } = useForm();
 
   const submitForm = handleSubmit(async (formData) => {
+    console.log("form dataaa");
     console.log(formData);
-    console.log(formData);
+    sendContactForm(formData.name, formData.email, formData.message);
     const myPromise = emailjs.send(
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
