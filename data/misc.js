@@ -20,3 +20,5 @@ export const foodSourcesDict = {
   milk: faWater,
   meat: faDrumstickBite,
 };
+
+export const data_entries = [];
