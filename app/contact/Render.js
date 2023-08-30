@@ -61,6 +61,13 @@ const Cont = styled.div`
     .flex-icons {
       flex-wrap: wrap;
     }
+    .email-link {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      word-break: break-all;
+    }
   }
   @media only screen and (max-width: 300px) {
     .contact-form,
@@ -71,6 +78,10 @@ const Cont = styled.div`
     .padding-16 {
       padding: 8px;
     }
+  }
+  .telegram-holder {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 `;
 
@@ -90,16 +101,18 @@ const Render = () => {
           <h3 className="white mar-bottom-32 center-inline">
             Contact Information
           </h3>
-          <div className="flex-column flex-one flex-wrap flex space-between  word-break">
+          <div className="flex-column flex-one flex-wrap flex space-between  ">
             <a
               href="mailto:Scottahalljr@gmail.com"
               className="flex-inline underline-hover hover-tan email-link"
             >
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                className="white icon-med mar-right-16"
-              />
-              <p className="large white ">Scottahalljr@gmail.com</p>
+              <div className="email-link flex align-center">
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="white icon-med mar-right-16"
+                />
+                <p className="large white">Scottahalljr@gmail.com</p>
+              </div>
             </a>
             <div className="flex flex-one space-around align-center flex-column flex-icons">
               <div className="flex flex-column align-center">
@@ -155,7 +168,7 @@ const Render = () => {
         </div>
       </div>
       <div className="ssm-spacer-bot-res"></div>
-      <div className="flex flex-wrap space-around">
+      <div className="flex flex-wrap space-around telegram-holder">
         <Telegram
           name="Canada Raw Milk"
           link="https://t.me/+rKAbKH5QRX04NmQx"
