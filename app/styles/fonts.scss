@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cormorant&family=Lato&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Source+Sans+3&display=swap');
 // Setting fonts for headings and paragraphs
 
 h1,h2,h3,h4,h5 {
-  font-family: "Abril Fatface";
+  font-family: "Playfair Display";
 }
 
 p {
-  font-family: 'Lato';
+  font-family: 'Source Sans 3';
 }
 
 // Desktop view, base px 18, multiplier of 1.2
@@ -72,4 +71,8 @@ p {
   p {
     font-size: 16px;
   }
+}
+
+.word-wrap{
+  word-break: break-all;
 }
