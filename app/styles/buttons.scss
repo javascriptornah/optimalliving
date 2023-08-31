@@ -32,6 +32,7 @@ $dark-green: #0E2D21;
   }
 }
 
+
 .form {
   border: 1px solid black;
   padding: 40px;
@@ -50,6 +51,12 @@ $dark-green: #0E2D21;
     }
   }
 }
+.hover-black {
+  &:hover{
+    color: $black;
+  }
+}
+
 
 .white-btn{
   cursor:pointer;

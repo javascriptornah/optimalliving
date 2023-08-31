@@ -34,8 +34,8 @@ const Page = () => {
   };
   return (
     <Cont colors={COLORS}>
-      <p onClick={}>Click me</p>
-      <p onClick={}>Click me two</p>
+      <p>Click me</p>
+      <p>Click me two</p>
     </Cont>
   );
 };

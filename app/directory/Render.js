@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
 import COLORS from "@/data/colors";
@@ -7,8 +7,13 @@ import Searchbar from "./components/Searchbar";
 import countries from "../../data/countries";
 import Results from "./components/Results";
 import FoodSourcing from "./components/FoodSourcing";
+import Signup from "./components/Signup";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Cont = styled.div`
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
   .content {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,6 +30,44 @@ const Cont = styled.div`
       .search-holder {
         margin-right: 0px;
       }
+    }
+  }
+  .image-holder {
+    position: relative;
+    width: 100%;
+    height: 635px;
+    border-radius: 0 32px 32px 0;
+    margin: 32px 0px;
+    overflow: hidden;
+
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      z-index: 1;
+      background-color: #fff;
+    }
+    .text-box {
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 3px solid ${(props) => props.colors.black};
+      padding: 16px;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      z-index: 2;
+      width: 90%;
+      border-radius: 16px;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .signup-holder {
+      flex-direction: column-reverse;
+    }
+    .image-holder {
+      flex: auto;
+      border-radius: 0;
+      margin: 0;
     }
   }
 `;
@@ -53,6 +96,29 @@ const Render = () => {
           <div className="flex-one">
             <Results />
           </div>
+        </div>
+      </div>
+      <div className="flex padding-32 signup-holder">
+        <div className="flex-one">
+          <Signup />
+        </div>
+        <div className="flex-one image-holder">
+          <div className="overlay"></div>
+          <div className="text-box center-inline">
+            <h4 className="white mar-bottom-8">
+              Connect with other like minded individuals
+            </h4>
+            <h4 className="white mar-bottom-32">
+              Find a local friend to share farms and meet up!
+            </h4>
+            <h1 className="white center-inline">Join The Directory!</h1>
+          </div>
+          <div className="absolute"></div>
+          <Image
+            src="/images/connect.jpg"
+            fill
+            style={{ objectFit: "cover" }}
+          />
         </div>
       </div>
       <FoodSourcing />
