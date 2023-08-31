@@ -58,6 +58,16 @@ const Navbar = () => {
             <Link href="/" className="mar-right-32 base-link mar-bottom-16">
               <h5 className={pathname == "/" ? "link-underline" : ""}>Home</h5>
             </Link>
+
+            <Link
+              href="/farmorder"
+              className="mar-right-32 base-link mar-bottom-16"
+            >
+              <h5 className={pathname == "/farmorder" ? "link-underline" : ""}>
+                Farm Order
+              </h5>
+            </Link>
+
             <Link
               href="/directory"
               className="mar-right-32 base-link mar-bottom-16"

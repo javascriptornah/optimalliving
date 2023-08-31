@@ -9,6 +9,10 @@ p {
   font-family: 'Source Sans 3';
 }
 
+.light {
+  font-weight: 300;
+}
+
 // Desktop view, base px 18, multiplier of 1.2
 
 @media only screen and (min-width: 1201px) {
