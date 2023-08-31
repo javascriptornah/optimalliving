@@ -167,7 +167,7 @@ const Render = () => {
           </div>
         </div>
       </div>
-      <div className="ssm-spacer-bot-res"></div>
+      <div className="sm-spacer-bot-res"></div>
       <div className="flex flex-wrap space-around telegram-holder">
         <Telegram
           name="Canada Raw Milk"
@@ -182,6 +182,7 @@ const Render = () => {
           color="#cc70e6"
         />
       </div>
+      <div className="sm-spacer-bot-res"></div>
     </Cont>
   );
 };
