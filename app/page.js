@@ -9,14 +9,14 @@ import "animate.css/animate.min.css";
 
 export default function Home() {
   return (
-    <main>
-      <AnimationOnScroll
+    <main className="base-page">
+      {/* <AnimationOnScroll
         animateIn="animate__fadeIn"
         animateOnce={true}
         duration={2}
       >
         <Hero />
-      </AnimationOnScroll>
+      </AnimationOnScroll> */}
       <div className="ssm-spacer-bot-res"></div>
       {/*  <Testimonials />
       <div className="ssm-spacer-bot-res"></div> */}
@@ -28,24 +28,24 @@ export default function Home() {
         <Welcome />
       </AnimationOnScroll>
       <div className="ssm-spacer-bot-res"></div>
-      <AnimationOnScroll
+      {/* <AnimationOnScroll
         animateIn="animate__fadeIn"
         animateOnce={true}
         duration={2}
       >
         <HereToHelp />
-      </AnimationOnScroll>
+      </AnimationOnScroll> */}
       <div className="ssm-spacer-bot-res"></div>
 
-      <div className="grey-block"></div>
+      {/*  <div className="grey-block"></div> */}
       <div className="ssm-spacer-bot-res"></div>
-      <AnimationOnScroll
+      {/* <AnimationOnScroll
         animateIn="animate__fadeIn"
         animateOnce={true}
         duration={2}
       >
         <Contact />
-      </AnimationOnScroll>
+      </AnimationOnScroll> */}
       <div className="sm-spacer"></div>
     </main>
   );
