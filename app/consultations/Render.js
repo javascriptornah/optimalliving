@@ -211,8 +211,8 @@ const Render = () => {
             <div className="mar-bottom-16"></div>
 
             {/** Age */}
-            <h5 className="mar-bottom-8">Age</h5>
-            <FormControl fullWidth>
+            {/*       <h5 className="mar-bottom-8">Age</h5> */}
+            {/*  <FormControl fullWidth>
               <InputLabel id="demo-simple-select-label">Age</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
@@ -228,7 +228,7 @@ const Render = () => {
                 <MenuItem value={"40-50"}>40 - 50</MenuItem>
                 <MenuItem value={"50+"}>50+</MenuItem>
               </Select>
-            </FormControl>
+            </FormControl> */}
             <div className="mar-bottom-32"></div>
             {/** End of age */}
 
