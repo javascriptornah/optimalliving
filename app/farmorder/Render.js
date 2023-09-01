@@ -104,7 +104,7 @@ const Render = () => {
                       <h4 className="mar-right-16">Cheese</h4>
                       <Image src="/icons/cheese.png" width={48} height={48} />
                     </div>
-                    <h5 className="grey light">$10/pound</h5>
+                    <h5 className="grey light">$12/pound</h5>
                   </div>
                   <div className="grey-line"></div>
                 </div>
