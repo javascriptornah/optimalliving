@@ -93,7 +93,7 @@ const Navbar = () => {
               <h5
                 className={pathname == "/consultations" ? "link-underline" : ""}
               >
-                Consultations
+                Inquire about health advice
               </h5>
             </Link>
             <Link
@@ -163,7 +163,7 @@ const Navbar = () => {
             onClick={toggleDropdown}
           >
             <h5 className={pathname == "/community" ? "link-underline" : ""}>
-              Community
+              Community Values
             </h5>
           </Link>
           <Link
@@ -174,7 +174,7 @@ const Navbar = () => {
             <h5
               className={pathname == "/consultations" ? "link-underline" : ""}
             >
-              Consultations
+              Inquire about health advice
             </h5>
           </Link>
           <Link

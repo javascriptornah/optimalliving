@@ -118,7 +118,7 @@ const Footer = () => {
       {/** End of grid 1 */}
 
       {/** Grid 2 */}
-      <div className="flex grid-2">
+      {/*  <div className="flex grid-2">
         <Link
           href="/"
           className={pathname == "/" ? "footer-link px-16 py-8" : "px-16 py-8"}
@@ -151,7 +151,7 @@ const Footer = () => {
         >
           <h5 className="white">Contact</h5>
         </Link>
-      </div>
+      </div> */}
       {/** End of grid 2 */}
 
       {/** Grid 3 */}

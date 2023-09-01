@@ -20,6 +20,9 @@ const Cont = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 32px;
+  form {
+    max-width: 600px;
+  }
   .flex-holder {
     display: flex;
     justify-content: center;
@@ -129,7 +132,7 @@ const Render = () => {
       <h1 className="mar-bottom-8">Book a consultation</h1>
       <div className="black-line-2 mar-bottom-32"></div>
       <div className="flex-holder">
-        <div>
+        {/*  <div>
           <h3 className="mar-bottom-16">Select a date</h3>
           <div ref={dateRef}>
             <Calendar onChange={setDay} value={day} minDate={new Date()} />
@@ -144,9 +147,14 @@ const Render = () => {
               />
             </LocalizationProvider>
           </div>
-        </div>
+        </div> */}
         <div>
           <form onSubmit={submitForm}>
+            <p className="mar-bottom-16">
+              "Warning: I am not a medical doctor or a licensed nutritionist. I
+              have simply studied the Primal Diet on my own time and am willing
+              to share my experience and opinions."
+            </p>
             {/** Name */}
             <label htmlFor="">
               <h5 className="mar-bottom-8">Name</h5>
@@ -169,7 +177,7 @@ const Render = () => {
 
             {/** Email */}
             <label htmlFor="">
-              <h5 className="mar-bottom-8">Email</h5>
+              <h5 className="mar-bottom-8">Preferred Contact</h5>
               <input
                 type="text"
                 placeholder="johndoe@gmail.com"
@@ -188,7 +196,7 @@ const Render = () => {
             {/** End of email */}
 
             {/** Instagram */}
-            <label htmlFor="">
+            {/* <label htmlFor="">
               <h5 className="mar-bottom-8">Instagram</h5>
               <input
                 type="text"
@@ -198,7 +206,7 @@ const Render = () => {
                   required: false,
                 })}
               />
-            </label>
+            </label> */}
 
             <div className="mar-bottom-16"></div>
 
@@ -225,7 +233,7 @@ const Render = () => {
             {/** End of age */}
 
             {/** Health status */}
-            <label
+            {/* <label
               htmlFor="
             "
             >
@@ -247,7 +255,7 @@ const Render = () => {
             <div className="mar-bottom-8"></div>
             {errors.healthIssues?.type == "required" && (
               <p className="red">*Health status required</p>
-            )}
+            )} */}
             <div className="mar-bottom-32"></div>
             {/** End of health status */}
 
@@ -257,8 +265,14 @@ const Render = () => {
             "
             >
               <h5 className="mar-bottom-8">What are your health goals?</h5>
+              <p className="mar-bottom-8">
+                If you have any health issues, please describe your issues in
+                detail and do not use umbrella medical terminology. Many people
+                are misdiagnosed and there are multiple different causes of
+                issues.
+              </p>
               <textarea
-                placeholder="Health goals"
+                placeholder="Health goals and issues"
                 name=""
                 className={errors?.goals?.type == "required" ? "error" : ""}
                 {...register("goals", {
@@ -274,7 +288,7 @@ const Render = () => {
             {/** End of health goals */}
 
             {/** How much pay */}
-            <label htmlFor="">
+            {/*   <label htmlFor="">
               <h5 className="mar-bottom-8">
                 How much are you willing to pay for perfect health?
               </h5>
@@ -286,14 +300,14 @@ const Render = () => {
                   required: false,
                 })}
               />
-            </label>
+            </label> */}
 
             {/** End of how much pay */}
             <div className="mar-bottom-32"></div>
 
             {/** Submit btn */}
             <button className="black-btn">
-              <h4>Book</h4>
+              <h4>Inquire</h4>
             </button>
           </form>
         </div>
