@@ -27,6 +27,9 @@ const Cont = styled.div`
       padding: 16px;
     }
   }
+  .grey-box {
+    padding: 16px;
+  }
 `;
 const Render = () => {
   return (
@@ -34,7 +37,8 @@ const Render = () => {
       <div className="content">
         {/** Header */}
         <h1 className="mar-bottom-8">Farm Sign Up Form</h1>
-        <div className="black-line-2 mar-bottom-32"></div>
+        <div className="black-line-2 "></div>
+        <div className="ssm-spacer-bot-res"></div>
         {/** End of header */}
 
         {/** Farm order flex holder */}
@@ -55,71 +59,77 @@ const Render = () => {
                 </p>
               </li>
               <li>
-                <p className="large">Only $25 one-time sign up fee</p>
+                <p className="large">
+                  Only <b>$25</b> one-time sign up fee
+                </p>
               </li>
             </ul>
             {/** End of What is the farm order */}
-            <div className="mar-bottom-32"></div>
+            <div className="ssm-spacer-bot-res"></div>
             {/** Pricing */}
-            <div className="mar-bottom-4 flex align-center">
-              <h2 className=" mar-right-16">Pricing</h2>
-              <Image src="/icons/price-tag.png" width={48} height={48} />
-            </div>
-            <div className="black-line mar-bottom-8"></div>
-
-            <div className="padding-left-16">
-              <div className="flex align-center space-between py-8">
-                <div className="flex align-center">
-                  <h4 className="mar-right-16">Butter</h4>
-                  <Image src="/icons/butter.png" width={48} height={48} />
-                </div>
-                <h5 className="grey light">$8/pound</h5>
+            <div className="grey-box">
+              <div className="mar-bottom-4 flex align-center">
+                <h2 className=" mar-right-16">Pricing</h2>
+                <Image src="/icons/price-tag.png" width={48} height={48} />
               </div>
+              <div className="black-line mar-bottom-8"></div>
 
-              <div className="grey-line"></div>
-
-              <div className="flex align-center space-between  py-8">
-                <div className="flex align-center">
-                  <h4 className="mar-right-16">Cream</h4>
-                  <Image src="/icons/cream.png" width={48} height={48} />
+              <div className="padding-left-16">
+                <div className="flex align-center space-between py-8">
+                  <div className="flex align-center">
+                    <h4 className="mar-right-16">Butter</h4>
+                    <Image src="/icons/butter.png" width={48} height={48} />
+                  </div>
+                  <h5 className="grey light">$8/pound</h5>
                 </div>
-                <h5 className="grey light">$10/quart</h5>
-              </div>
-              <div className="grey-line"></div>
 
-              <div className="flex align-center space-between  py-8">
-                <div className="flex align-center">
-                  <h4 className="mar-right-16">Cheese</h4>
-                  <Image src="/icons/cheese.png" width={48} height={48} />
+                <div className="grey-line"></div>
+
+                <div className="flex align-center space-between  py-8">
+                  <div className="flex align-center">
+                    <h4 className="mar-right-16">Cream</h4>
+                    <Image src="/icons/cream.png" width={48} height={48} />
+                  </div>
+                  <h5 className="grey light">$10/quart</h5>
                 </div>
-                <h5 className="grey light">$10/pound</h5>
+                <div className="grey-line"></div>
+
+                <div className="flex align-center space-between  py-8">
+                  <div className="flex align-center">
+                    <h4 className="mar-right-16">Cheese</h4>
+                    <Image src="/icons/cheese.png" width={48} height={48} />
+                  </div>
+                  <h5 className="grey light">$10/pound</h5>
+                </div>
+                <div className="grey-line"></div>
               </div>
-              <div className="grey-line"></div>
             </div>
             {/** End of Pricing */}
-            <div className="mar-bottom-32"></div>
+            <div className="ssm-spacer-bot-res"></div>
 
             {/** Shipping */}
-            <div className="mar-bottom-4 flex align-center">
-              <h2 className=" mar-right-16">Shipping</h2>
-              <Image src="/icons/shipping.png" width={48} height={48} />
+            <div className="grey-box">
+              <div className="mar-bottom-4 flex align-center">
+                <h2 className=" mar-right-16">Shipping</h2>
+                <Image src="/icons/shipping.png" width={48} height={48} />
+              </div>
+              <div className="black-line mar-bottom-16"></div>
+              <ul className="padding-left-16">
+                <li>
+                  <p className="large">
+                    Average cost is <b>$50-120</b> depending how far you are
+                    from Pennsylvania
+                  </p>
+                </li>
+                <li>
+                  <p className="large">
+                    Ex. Costed <b>$150</b> shipping for <b>$450</b> of food to
+                    St. Louis ($600 total)
+                  </p>
+                </li>
+              </ul>
+              {/** End of shipping */}
             </div>
-            <div className="black-line mar-bottom-16"></div>
-            <ul className="padding-left-16">
-              <li>
-                <p className="large">
-                  Average cost is $50-120 depending how far you are from
-                  Pennsylvania
-                </p>
-              </li>
-              <li>
-                <p className="large">
-                  Ex. Costed $150 shipping for $450 of food to St. Louis ($600
-                  total)
-                </p>
-              </li>
-            </ul>
-            {/** End of shipping */}
           </div>
           {/** Image */}
           <div className="flex-one image-holder mar-bottom-32">
@@ -140,6 +150,7 @@ const Render = () => {
         <h1 className="mar-bottom-8">Sign Up below</h1>
         <div className="black-line-2"></div>
         {/** End of Sign Up */}
+        <div className="sm-spacer-bot-res"></div>
       </div>
     </Cont>
   );

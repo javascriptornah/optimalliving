@@ -127,12 +127,30 @@ const Navbar = () => {
             <h5 className={pathname == "/" ? "link-underline" : ""}>Home</h5>
           </Link>
           <Link
+            href="/farmorder"
+            className=" base-link mar-bottom-16"
+            onClick={toggleDropdown}
+          >
+            <h5 className={pathname == "/farmorder" ? "link-underline" : ""}>
+              Farm Order
+            </h5>
+          </Link>
+          <Link
             href="/directory"
             className=" base-link mar-bottom-16"
             onClick={toggleDropdown}
           >
             <h5 className={pathname == "/directory" ? "link-underline" : ""}>
               Directory
+            </h5>
+          </Link>
+          <Link
+            href="/community"
+            className=" base-link mar-bottom-16"
+            onClick={toggleDropdown}
+          >
+            <h5 className={pathname == "/community" ? "link-underline" : ""}>
+              Community
             </h5>
           </Link>
           <Link
