@@ -3,6 +3,7 @@ import Contact from "./home/Contact";
 import HereToHelp from "./home/HereToHelp";
 import Hero from "./home/Hero";
 import Testimonials from "./home/Testimonials";
+import Welcome from "./home/Welcome";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <div className="ssm-spacer-bot-res"></div>
       {/*  <Testimonials />
       <div className="ssm-spacer-bot-res"></div> */}
+      <Welcome />
+      <div className="ssm-spacer-bot-res"></div>
       <HereToHelp />
       <div className="ssm-spacer-bot-res"></div>
 

@@ -38,7 +38,9 @@ const FoodFinder = (props) => {
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
   const [countries, setCountries] = useState([]);
+  const [baseStates, setBaseStates] = useState([]);
   const [states, setStates] = useState([]);
+  const [baseCities, setBaseCities] = useState([]);
   const [cities, setCities] = useState([]);
   const [data, setData] = useState([]);
   const [locations, setLocations] = useState([]);
@@ -153,10 +155,11 @@ const FoodFinder = (props) => {
     });
     states = [...new Set(states.map((item) => item.subcountry))];
     states.sort();
+    setBaseStates(states);
     setStates((prevStates) => {
       return states;
     });
-    setState("?");
+    setState("");
     setCity("");
   }
 
@@ -172,6 +175,7 @@ const FoodFinder = (props) => {
     cities = cities.map((city) => city.name);
     cities.sort();
     setCities(cities);
+    setBaseCities(cities);
   }
 
   function updateCity(value) {
@@ -205,7 +209,7 @@ const FoodFinder = (props) => {
 
       <Select
         title={"Enter State"}
-        regions={states}
+        regions={baseStates}
         options={states}
         setOptions={setStates}
         value={state}
@@ -215,7 +219,7 @@ const FoodFinder = (props) => {
 
       <Select
         title={"Enter City"}
-        regions={cities}
+        regions={baseCities}
         options={cities}
         setOptions={setCities}
         value={city}

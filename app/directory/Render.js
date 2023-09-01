@@ -32,12 +32,15 @@ const Cont = styled.div`
       }
     }
   }
+  .signup-holder {
+    padding: 32px;
+  }
   .image-holder {
     position: relative;
-    width: 100%;
-    height: 635px;
+
+    flex: 1;
     border-radius: 0 32px 32px 0;
-    margin: 32px 0px;
+
     overflow: hidden;
 
     .overlay {
@@ -60,14 +63,26 @@ const Cont = styled.div`
       border-radius: 16px;
     }
   }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 800px) {
     .signup-holder {
       flex-direction: column-reverse;
+      padding: 16px;
     }
     .image-holder {
+      flex-grow: 1;
+      flex-shrink: 0;
       flex: auto;
       border-radius: 0;
       margin: 0;
+      height: 600px;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .image-holder {
+      height: 400px;
+    }
+    .signup-holder {
+      padding: 0px;
     }
   }
 `;
@@ -98,7 +113,7 @@ const Render = () => {
           </div>
         </div>
       </div>
-      <div className="flex padding-32 signup-holder">
+      <div className="flex  signup-holder">
         <div className="flex-one">
           <Signup />
         </div>
@@ -114,11 +129,7 @@ const Render = () => {
             <h1 className="white center-inline">Join The Directory!</h1>
           </div>
           <div className="absolute"></div>
-          <Image
-            src="/images/connect.jpg"
-            fill
-            style={{ objectFit: "cover" }}
-          />
+          <Image src="/images/connect.jpg" fill objectFit="cover" />
         </div>
       </div>
       <FoodSourcing />

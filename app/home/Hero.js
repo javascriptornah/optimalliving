@@ -60,9 +60,9 @@ const Hero = () => {
         <div className="banner">
           <h2>Improve your health and find your community</h2>
           <div className="buttons flex flex-column flex-one justify-center">
-            <Link href="/consultations">
+            <Link href="/farmorder">
               <div className="black-btn mar-bottom-32">
-                <h4>Book a consultation</h4>
+                <h4>Farm Order</h4>
               </div>
             </Link>
             <Link href="/directory">

@@ -8,8 +8,6 @@ import AddSocial from "@/app/inputs/AddSocial";
 import { createUser } from "@/lib/SupabaseFunctions";
 
 const Cont = styled.div`
-  padding: 32px 0px;
-
   .holder {
     background-color: ${(props) => props.colors.lightGrey};
     padding: 32px;
@@ -23,7 +21,7 @@ const Cont = styled.div`
     background-color: #fff;
     padding: 8px;
   }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 800px) {
     .holder {
       border-radius: 0px;
       margin: 0;
