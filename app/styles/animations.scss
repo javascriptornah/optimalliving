@@ -27,3 +27,19 @@
   animation-name: border;
   animation-duration: 2s;
 }
+
+@keyframes fade-in-left {
+  from {
+    left:-100px;
+    opacity:0;
+  }
+  to {
+    left:0px;
+    opacity:1;
+  }
+}
+
+.fade-in-left-animation {
+  animation-name: fade-in-left;
+  animation-duration: 2s;
+}

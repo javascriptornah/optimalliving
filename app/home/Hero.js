@@ -36,6 +36,8 @@ const Cont = styled.div`
     left: 0px;
   }
   .banner {
+    transform: translateX(-50%);
+    left: 50%;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 16px 32px;
     border-radius: 32px;

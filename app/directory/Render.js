@@ -9,6 +9,8 @@ import Results from "./components/Results";
 import FoodSourcing from "./components/FoodSourcing";
 import Signup from "./components/Signup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css/animate.min.css";
 
 const Cont = styled.div`
   position: relative;
@@ -113,25 +115,27 @@ const Render = () => {
           </div>
         </div>
       </div>
-      <div className="flex  signup-holder">
-        <div className="flex-one">
-          <Signup />
-        </div>
-        <div className="flex-one image-holder">
-          <div className="overlay"></div>
-          <div className="text-box center-inline">
-            <h4 className="white mar-bottom-8">
-              Connect with other like minded individuals
-            </h4>
-            <h4 className="white mar-bottom-32">
-              Find a local friend to share farms and meet up!
-            </h4>
-            <h1 className="white center-inline">Join The Directory!</h1>
+      <AnimationOnScroll animateIn="animate__fadeInLeftBig" animateOnce={true}>
+        <div className="flex  signup-holder">
+          <div className="flex-one">
+            <Signup />
           </div>
-          <div className="absolute"></div>
-          <Image src="/images/connect.jpg" fill objectFit="cover" />
+          <div className="flex-one image-holder">
+            <div className="overlay"></div>
+            <div className="text-box center-inline">
+              <h4 className="white mar-bottom-8">
+                Connect with other like minded individuals
+              </h4>
+              <h4 className="white mar-bottom-32">
+                Find a local friend to share farms and meet up!
+              </h4>
+              <h1 className="white center-inline">Join The Directory!</h1>
+            </div>
+            <div className="absolute"></div>
+            <Image src="/images/connect.jpg" fill objectFit="cover" />
+          </div>
         </div>
-      </div>
+      </AnimationOnScroll>
       <FoodSourcing />
       <div className="sm-spacer-bot-res"></div>
     </Cont>

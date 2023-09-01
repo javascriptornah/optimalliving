@@ -294,7 +294,7 @@ a {
 
 .base-link{ 
   &:hover{
-    h5{
+    h3,h4,h5{
       text-decoration: underline;
       text-decoration-thickness: 4px;
       text-underline-offset: 4px;
