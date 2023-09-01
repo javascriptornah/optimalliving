@@ -93,7 +93,7 @@ const Navbar = () => {
               <h5
                 className={pathname == "/consultations" ? "link-underline" : ""}
               >
-                Inquire about health advice
+                Health Inquiry
               </h5>
             </Link>
             <Link
@@ -174,7 +174,7 @@ const Navbar = () => {
             <h5
               className={pathname == "/consultations" ? "link-underline" : ""}
             >
-              Inquire about health advice
+              Health Inquiry
             </h5>
           </Link>
           <Link

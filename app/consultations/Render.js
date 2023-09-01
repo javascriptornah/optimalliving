@@ -129,7 +129,7 @@ const Render = () => {
   return (
     <Cont colors={COLORS}>
       <Toaster />
-      <h1 className="mar-bottom-8">Book a consultation</h1>
+      <h1 className="mar-bottom-8">Health Inquiry</h1>
       <div className="black-line-2 mar-bottom-32"></div>
       <div className="flex-holder">
         {/*  <div>
@@ -150,10 +150,10 @@ const Render = () => {
         </div> */}
         <div>
           <form onSubmit={submitForm}>
-            <p className="mar-bottom-16">
-              "Warning: I am not a medical doctor or a licensed nutritionist. I
+            <p className="red">
+              Warning: I am not a medical doctor or a licensed nutritionist. I
               have simply studied the Primal Diet on my own time and am willing
-              to share my experience and opinions."
+              to share my experience and opinions.
             </p>
             {/** Name */}
             <label htmlFor="">
