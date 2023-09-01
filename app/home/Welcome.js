@@ -13,13 +13,6 @@ const Welcome = () => {
           Welcome to the Optimal Living Community!
         </h1>
         <div className="grey-box padding-32 mar-bottom-32">
-          <p
-            className="large mar-bottom-16
-          "
-          >
-            Here we believe in developing an optimal lifestyle and working to
-            spread the message in order to live it with other people.
-          </p>
           <p className="large">
             To understand who we are and what we value, checkout the
             introduction below

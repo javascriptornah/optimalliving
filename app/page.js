@@ -9,7 +9,7 @@ import "animate.css/animate.min.css";
 
 export default function Home() {
   return (
-    <main className="base-page">
+    <main className="">
       {/* <AnimationOnScroll
         animateIn="animate__fadeIn"
         animateOnce={true}
